@@ -1,5 +1,5 @@
 #! /bin/bash
 
 git pull
-./build.sh -s ospi
+./build.sh -s odroid
 /etc/init.d/OpenSprinkler.sh restart
