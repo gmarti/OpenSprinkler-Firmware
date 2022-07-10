@@ -583,8 +583,8 @@ void server_change_stations() {
 			// only process GPIO and HTTP stations for OS 2.3, above, and OSPi
 			if(tmp_buffer[0] == STN_TYPE_GPIO) {
 				// check that pin does not clash with OSPi pins
-				byte gpio = (tmp_buffer[1] - '0') * 10 + tmp_buffer[2] - '0';
-				byte activeState = tmp_buffer[3] - '0';
+				byte gpio = (tmp_buffer[1] - '0') * 100 + (tmp_buffer[2] - '0') * 10 + tmp_buffer[3] - '0';
+				byte activeState = tmp_buffer[4] - '0';
 
 				byte gpioList[] = PIN_FREE_LIST;
 				bool found = false;

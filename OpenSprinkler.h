@@ -105,7 +105,7 @@ struct RemoteStationData {
 
 /** GPIO station data structures - Must fit in STATION_SPECIAL_DATA_SIZE */
 struct GPIOStationData {
-	byte pin[2];
+	byte pin[3];
 	byte active;
 };
 
